@@ -1,54 +1,21 @@
-import React from "react";
-import { createRoot } from "react-dom/client";
-import "./styles.css";
-
-const App = () => {
-  return (
-    <div className="container">
-      <h1 className="title">CS2 Mini App</h1>
-      <div className="button-group">
-        <button className="button">Записаться на турнир</button>
-        <button className="button">Список участников</button>
-        <button className="button">Выйти из списка</button>
-        <button className="button">Играть в CS2 Quiz</button>
-        <button className="button">Играть в Змейку</button>
-      </div>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CS2 Mini-App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Добро пожаловать в CS2 Mini-App</h1>
+        <div class="menu">
+            <button onclick="window.location.href='quiz.html'">🔥 CS2 Quiz</button>
+            <button onclick="window.location.href='snake.html'">🐍 Змейка</button>
+            <button onclick="window.Telegram.WebApp.close()">❌ Закрыть</button>
+        </div>
     </div>
-  );
-};
 
-const root = createRoot(document.getElementById("root"));
-root.render(<App />);
-
-// styles.css
-/*
-.container {
-  background-color: #1b1b1b;
-  color: white;
-  text-align: center;
-  padding: 20px;
-  font-family: Arial, sans-serif;
-}
-.title {
-  color: #ff9800;
-  font-size: 24px;
-}
-.button-group {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-top: 20px;
-}
-.button {
-  background-color: #ff9800;
-  color: black;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-  font-size: 18px;
-  border-radius: 5px;
-}
-.button:hover {
-  background-color: #e68900;
-}
-*/
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</body>
+</html>
