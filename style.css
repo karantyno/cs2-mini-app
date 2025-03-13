@@ -95,3 +95,10 @@ a {
 a:hover {
     text-decoration: underline;
 }
+
+#question-image {
+    display: block;
+    margin: 20px auto; /* Центрирование */
+    max-width: 100%; /* Чтобы не выходило за границы */
+}
+
