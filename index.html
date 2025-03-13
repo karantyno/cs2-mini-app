@@ -1,20 +1,29 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Запись на турнир</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://telegram.org/js/telegram-web-app.js"></script>
-</head>
-<body>
-    <h1>Запись на турнир</h1>
-    <button id="joinButton">Записаться</button>
-    <button id="leaveButton">Выйти из списка</button>
-    <button id="clearListButton">Очистить список (только для администраторов)</button>
-    <h2>Список участников:</h2>
-    <ul id="participantsList"></ul>
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import "tailwindcss/tailwind.css";
 
-    <script src="script.js"></script>
-</body>
-</html>
+const Home = () => {
+  const navigate = useNavigate();
+
+  return (
+    <div className="bg-black min-h-screen flex flex-col items-center justify-center text-white p-5">
+      <h1 className="text-4xl font-bold text-orange-500 mb-6">CS2 Mini-Game Hub</h1>
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+        <button
+          className="bg-orange-500 hover:bg-orange-600 text-black font-bold py-4 px-6 rounded-2xl shadow-lg transition duration-300"
+          onClick={() => navigate("/quiz")}
+        >
+          🎯 CS2 Quiz
+        </button>
+        <button
+          className="bg-orange-500 hover:bg-orange-600 text-black font-bold py-4 px-6 rounded-2xl shadow-lg transition duration-300"
+          onClick={() => navigate("/snake")}
+        >
+          🐍 Змейка
+        </button>
+      </div>
+    </div>
+  );
+};
+
+export default Home;
