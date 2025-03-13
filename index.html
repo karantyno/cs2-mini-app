@@ -1,22 +1,54 @@
 import React from "react";
+import { createRoot } from "react-dom/client";
 import "./styles.css";
 
 const App = () => {
   return (
     <div className="container">
-      <h1>CS2 Mini-App</h1>
-      <div className="menu">
-        <button className="btn">📌 Записаться на турнир</button>
-        <button className="btn">📜 Список участников</button>
-        <button className="btn">🚪 Выйти из списка</button>
-      </div>
-      <h2>Выберите мини-игру:</h2>
-      <div className="game-menu">
-        <button className="btn">🎮 CS2 Quiz</button>
-        <button className="btn">🐍 Змейка</button>
+      <h1 className="title">CS2 Mini App</h1>
+      <div className="button-group">
+        <button className="button">Записаться на турнир</button>
+        <button className="button">Список участников</button>
+        <button className="button">Выйти из списка</button>
+        <button className="button">Играть в CS2 Quiz</button>
+        <button className="button">Играть в Змейку</button>
       </div>
     </div>
   );
 };
 
-export default App;
+const root = createRoot(document.getElementById("root"));
+root.render(<App />);
+
+// styles.css
+/*
+.container {
+  background-color: #1b1b1b;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+.title {
+  color: #ff9800;
+  font-size: 24px;
+}
+.button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+.button {
+  background-color: #ff9800;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 5px;
+}
+.button:hover {
+  background-color: #e68900;
+}
+*/
