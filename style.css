@@ -46,6 +46,27 @@ button:hover {
     transform: scale(1.05);
 }
 
+.game-button {
+    display: inline-block;
+    background-color: #ff8c00; /* Оранжевый цвет */
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px 24px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    margin: 10px auto;
+    width: 200px;
+    display: block;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.game-button:hover {
+    background-color: #e07b00; /* Темнее при наведении */
+}
+
 /* Поля ввода */
 input, select {
     width: calc(100% - 20px);
